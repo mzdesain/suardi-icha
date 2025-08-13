@@ -114,7 +114,7 @@
         // --- PENGATURAN TEMPLATE ---
         // Anda bisa mengubah data di bawah ini jika ada perubahan
         const NAMA_PRIA = "Suardi, S.H.";
-        const NAMA_WANITA = "Siti Nurhaliza (Icha)";
+        const NAMA_WANITA = "Siti Nurhaliza";
         const LINK_UNDANGAN_DASAR = "https://suardi-icha.netlify.app/";
         const HARI_TANGGAL_AKAD = "Senin, 1 September 2025";
         const PUKUL_AKAD = "11.00 WITA sd Selesai";
@@ -139,31 +139,29 @@
             const fullLink = `${LINK_UNDANGAN_DASAR}?to=${encodedGuestName}`;
 
             // Template pesan undangan (gunakan backtick ` untuk multiline)
-            const messageTemplate = `Assalamu'alaikum Warahmatullah Wabarakatuh
+            const messageTemplate = `*Assalamu'alaikum Warahmatullah Wabarakatuh*
 
-Yth. ${guestName}
-(Mohon maaf bila penulisan nama dan gelar keliru)
+Yth. *${guestName}*
+_(Mohon maaf bila penulisan nama dan gelar keliru)_
 
 Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i, teman sekaligus sahabat, untuk menghadiri acara pernikahan kami:
 
-- ${NAMA_PRIA}
-  dan
-- ${NAMA_WANITA}
+*${NAMA_PRIA}* dan *${NAMA_WANITA}*
 
 Berikut link undangan kami, untuk info selengkapnya dari acara silahkan kunjungi:
 
 ${fullLink}
 
 Pada
-🗓️ Hari/ Tanggal: ${HARI_TANGGAL_AKAD}
-🕐 Pukul: ${PUKUL_AKAD}
-📍 Alamat: ${ALAMAT_AKAD}
+🗓️ ${HARI_TANGGAL_AKAD}
+🕐 ${PUKUL_AKAD}
+📍  ${ALAMAT_AKAD}
 
 Mohon maaf perihal undangan hanya dibagikan melalui pesan ini.
 
-Syukron Jazakumullahu Khairan atas perhatiannya.
+_Syukron Jazakumullahu Khairan atas perhatiannya._
 
-Wassalamu'alaikum warahmatullahi wabarakatuh.`;
+*Wassalamu'alaikum warahmatullahi wabarakatuh.*`;
 
             outputMessage.value = messageTemplate;
         }
