@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suardi & Icha</title>
-    
-    <!-- Meta Tags for Social Sharing -->
+
     <meta property="og:title" content="Undangan Pernikahan Suardi & Icha">
     <meta property="og:description" content="Dengan ridho Allah SWT, kami mengundang Anda dalam pernikahan kami">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
-        
+
         * {
             margin: 0;
             padding: 0;
@@ -90,9 +90,17 @@
         }
 
         @keyframes musicPulse {
-            0% { box-shadow: 0 0 0 0 rgba(44, 85, 48, 0.4); }
-            70% { box-shadow: 0 0 0 15px rgba(44, 85, 48, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(44, 85, 48, 0); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(44, 85, 48, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(44, 85, 48, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(44, 85, 48, 0);
+            }
         }
 
         /* Hero Section */
@@ -116,10 +124,10 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(201,169,110,0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(201,169,110,0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(201,169,110,0.05) 0%, transparent 50%);
+            background:
+                radial-gradient(circle at 20% 80%, rgba(201, 169, 110, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(201, 169, 110, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(201, 169, 110, 0.05) 0%, transparent 50%);
             opacity: 0.8;
         }
 
@@ -154,11 +162,25 @@
         }
 
         @keyframes heartbeat {
-            0% { transform: scale(1); }
-            14% { transform: scale(1.1); }
-            28% { transform: scale(1); }
-            42% { transform: scale(1.1); }
-            70% { transform: scale(1); }
+            0% {
+                transform: scale(1);
+            }
+
+            14% {
+                transform: scale(1.1);
+            }
+
+            28% {
+                transform: scale(1);
+            }
+
+            42% {
+                transform: scale(1.1);
+            }
+
+            70% {
+                transform: scale(1);
+            }
         }
 
         .couple-names {
@@ -170,7 +192,7 @@
             letter-spacing: 2px;
             z-index: 2;
             position: relative;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
             background: linear-gradient(45deg, var(--white), var(--accent-light));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -204,7 +226,7 @@
             font-size: clamp(0.9rem, 2.5vw, 1.1rem);
             font-weight: 600;
             cursor: pointer;
-            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2), 0 0 20px rgba(201,169,110,0.3);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2), 0 0 20px rgba(201, 169, 110, 0.3);
             transition: all 0.4s ease;
             margin-top: 2rem;
             z-index: 2;
@@ -216,13 +238,18 @@
 
         .open-invitation:hover {
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.4), 0 0 30px rgba(201,169,110,0.5);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.4), 0 0 30px rgba(201, 169, 110, 0.5);
             background: var(--white);
         }
 
         @keyframes glow {
-            from { box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2), 0 0 20px rgba(201,169,110,0.3); }
-            to { box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3), 0 0 25px rgba(201,169,110,0.4); }
+            from {
+                box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2), 0 0 20px rgba(201, 169, 110, 0.3);
+            }
+
+            to {
+                box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3), 0 0 25px rgba(201, 169, 110, 0.4);
+            }
         }
 
         .guest-name-btn {
@@ -466,7 +493,9 @@
             font-weight: 500;
         }
 
-        .form-input, .form-textarea, .form-select {
+        .form-input,
+        .form-textarea,
+        .form-select {
             width: 100%;
             padding: 1rem;
             border: 2px solid rgba(44, 85, 48, 0.1);
@@ -477,7 +506,9 @@
             font-family: inherit;
         }
 
-        .form-input:focus, .form-textarea:focus, .form-select:focus {
+        .form-input:focus,
+        .form-textarea:focus,
+        .form-select:focus {
             outline: none;
             border-color: var(--primary);
             box-shadow: 0 0 0 3px rgba(44, 85, 48, 0.1);
@@ -737,9 +768,11 @@
             padding: 3rem 2rem 6rem;
             text-align: center;
             display: none;
+            padding-bottom: 120px;
+            /* <-- TAMBAHKAN BARIS INI */
         }
 
-        .main-content.visible + .nav-menu + .footer {
+        .nav-menu.visible+.footer {
             display: block;
         }
 
@@ -797,14 +830,14 @@
                 grid-template-columns: 1fr 1fr;
                 gap: 3rem;
             }
-            
+
             .bank-actions {
                 grid-template-columns: 1fr 1fr;
                 max-width: 400px;
                 margin-left: auto;
                 margin-right: auto;
             }
-            
+
             .nav-items {
                 max-width: 500px;
             }
@@ -816,7 +849,7 @@
                 margin: 0 auto;
                 box-shadow: 0 0 50px var(--shadow-light);
             }
-            
+
             .content-section {
                 padding: 5rem 3rem;
             }
@@ -832,6 +865,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -847,6 +881,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -854,85 +889,78 @@
         }
     </style>
 </head>
+
 <body>
-    <!-- Background Music -->
     <audio id="bgMusic" loop>
         <source src="" type="audio/mpeg">
     </audio>
 
-    <!-- Music Control - Top Right -->
     <button class="music-control" id="musicBtn">
         <i class="fas fa-play"></i>
     </button>
 
-    <!-- Back to Top -->
     <button class="back-to-top" id="backTop">
         <i class="fas fa-chevron-up"></i>
     </button>
 
-    <!-- Toast -->
     <div class="toast" id="toast"></div>
 
     <div class="main-container">
-        <!-- Hero Section -->
         <section class="hero-section" id="heroSection">
             <div class="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</div>
-            
+
             <div class="love-icon">
                 <i class="fas fa-heart"></i>
             </div>
 
             <h1 class="couple-names">Suardi & Icha</h1>
             <div class="wedding-date">1 September 2025</div>
-            
+
             <div class="guest-info" id="guestInfo">
                 Kepada Yth. Tamu Undangan
             </div>
-            
+
             <button class="open-invitation" onclick="startInvitation()">
                 Buka Undangan
             </button>
         </section>
 
-        <!-- Main Content (Hidden Initially) -->
         <div class="main-content" id="mainContent">
-            <!-- Couple Section -->
             <section class="content-section" id="coupleSection">
                 <div class="section-header">
                     <h2 class="section-title">Mempelai</h2>
                     <p class="section-desc">Yang berbahagia</p>
                 </div>
-                
+
                 <div class="couple-container">
                     <div class="card couple-profile animate-in">
-                        <div class="profile-avatar">س</div>
+                        <div class="profile-avatar">S</div>
                         <div class="profile-name">Suardi</div>
                         <div class="profile-fullname">SUARDI, S.H</div>
                         <div class="profile-parents">
                             Putra Pertama dari<br>
-                            Bapak SAHARUDDIN & Ibu SURIANI
+                            Bapak Saharuddin & Ibu Suriani
                         </div>
                     </div>
 
                     <div class="card couple-profile animate-in">
-                        <div class="profile-avatar">إ</div>
+                        <div class="profile-avatar">I</div>
                         <div class="profile-name">Icha</div>
                         <div class="profile-fullname">SITI NURHALIZA</div>
                         <div class="profile-parents">
                             Putri Keempat dari<br>
-                            Bapak BAHTIAR & Ibu NURSITIN
+                            Bapak Bahtiar & Ibu Nursitin
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Akad Section -->
             <section class="content-section" id="akadSection">
                 <div class="section-header">
                     <h2 class="section-title">Akad Nikah</h2>
                     <p class="section-desc">Ijab Qabul</p>
                 </div>
-                
+
                 <div class="card event-card fade-in-up">
                     <div class="event-name">Akad Nikah</div>
                     <div class="event-datetime">Senin, 1 September 2025</div>
@@ -947,13 +975,12 @@
                 </div>
             </section>
 
-            <!-- Reception Section -->
             <section class="content-section" id="receptionSection">
                 <div class="section-header">
                     <h2 class="section-title">Resepsi</h2>
                     <p class="section-desc">Walimatul Ursy</p>
                 </div>
-                
+
                 <div class="card event-card fade-in-up">
                     <div class="event-name">Resepsi Pernikahan</div>
                     <div class="event-datetime">Selasa, 2 September 2025</div>
@@ -968,13 +995,12 @@
                 </div>
             </section>
 
-            <!-- Countdown Section -->
             <section class="content-section" id="countdownSection">
                 <div class="section-header">
                     <h2 class="section-title">Hitung Mundur</h2>
                     <p class="section-desc">Menuju hari bahagia</p>
                 </div>
-                
+
                 <div class="card">
                     <div id="countdownDisplay">
                         <div class="countdown-wrapper">
@@ -999,13 +1025,12 @@
                 </div>
             </section>
 
-            <!-- RSVP Section -->
             <section class="content-section" id="rsvpSection">
                 <div class="section-header">
                     <h2 class="section-title">Ucapan & Konfirmasi</h2>
                     <p class="section-desc">Berikan ucapan terbaik untuk kami</p>
                 </div>
-                
+
                 <div class="card">
                     <div class="form-container">
                         <form onsubmit="handleRSVP(event)">
@@ -1013,13 +1038,13 @@
                                 <label class="form-label">Nama Lengkap</label>
                                 <input type="text" class="form-input" id="rsvpName" required>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label class="form-label">Ucapan & Doa</label>
-                                <textarea class="form-textarea" id="rsvpMessage" 
-                                          placeholder="Tuliskan ucapan dan doa terbaik untuk kami..."></textarea>
+                                <textarea class="form-textarea" id="rsvpMessage"
+                                    placeholder="Tuliskan ucapan dan doa terbaik untuk kami..."></textarea>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label class="form-label">Konfirmasi Kehadiran</label>
                                 <select class="form-select" id="rsvpAttendance" required>
@@ -1028,12 +1053,12 @@
                                     <option value="Tidak Hadir">Tidak Hadir</option>
                                 </select>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label class="form-label">Jumlah Tamu</label>
                                 <input type="number" class="form-input" id="rsvpGuests" min="1" max="5" value="1">
                             </div>
-                            
+
                             <button type="submit" class="form-submit">
                                 <i class="fas fa-paper-plane"></i> Kirim Ucapan
                             </button>
@@ -1044,26 +1069,25 @@
                 </div>
             </section>
 
-            <!-- Gift Section -->
             <section class="content-section" id="giftSection">
                 <div class="section-header">
                     <h2 class="section-title">Hadiah</h2>
                     <p class="section-desc">Amplop Digital</p>
                 </div>
-                
+
                 <div class="card">
                     <div class="gift-wrapper">
                         <p class="gift-intro">
                             Doa restu Anda merupakan karunia yang sangat berarti bagi kami.<br>
-                            Namun jika memberi adalah ungkapan tanda kasih Anda, 
+                            Namun jika memberi adalah ungkapan tanda kasih Anda,
                             Anda dapat mengirim hadiah secara digital.
                         </p>
-                        
+
                         <div class="bank-info">
                             <div class="bank-title">Bank Syariah Indonesia (BSI)</div>
                             <div class="account-number" id="bankAccount">1060281460</div>
                             <div class="account-name">SUARDI</div>
-                            
+
                             <div class="bank-actions">
                                 <button class="bank-btn" onclick="copyBankAccount()">
                                     <i class="fas fa-copy"></i> Salin Rekening
@@ -1077,32 +1101,38 @@
                 </div>
             </section>
 
-            <!-- Closing Section -->
             <section class="content-section" id="closingSection">
                 <div class="section-header">
                     <h2 class="section-title">Penutup</h2>
                     <p class="section-desc">Terima kasih</p>
                 </div>
-                
+
                 <div class="card" style="text-align: center;">
                     <p style="margin-bottom: 2rem; line-height: 1.8; font-size: clamp(0.9rem, 2.5vw, 1rem);">
-                        Merupakan suatu kehormatan dan kebahagiaan bagi kami, 
-                        apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu 
+                        Merupakan suatu kehormatan dan kebahagiaan bagi kami,
+                        apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu
                         kepada kedua mempelai.
                     </p>
-                    
-                    <div style="font-style: italic; color: var(--gray); margin: 2rem 0; font-size: clamp(0.85rem, 2.5vw, 0.95rem); font-family: 'Amiri', serif;">
-                        "رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا"<br>
-                        <small style="margin-top: 1rem; display: block; font-family: 'Inter', sans-serif;">"Ya Tuhan kami, anugrahkanlah kepada kami pasangan dan keturunan yang menyejukkan mata, dan jadikanlah kami pemimpin bagi orang-orang yang bertakwa." (QS. Al-Furqan: 74)</small>
+
+                    <div
+                        style="font-style: italic; color: var(--gray); margin: 2rem 0; font-size: clamp(0.85rem, 2.5vw, 0.95rem); font-family: 'Amiri', serif;">
+                        "رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا
+                        لِلْمُتَّقِينَ إِمَامًا"<br>
+                        <small style="margin-top: 1rem; display: block; font-family: 'Inter', sans-serif;">"Ya Tuhan
+                            kami, anugrahkanlah kepada kami pasangan dan keturunan yang menyejukkan mata, dan jadikanlah
+                            kami pemimpin bagi orang-orang yang bertakwa." (QS. Al-Furqan: 74)</small>
                     </div>
-                    
-                    <p style="font-weight: 600; color: var(--primary); margin-top: 2rem; font-size: clamp(0.9rem, 2.5vw, 1rem);">
+
+                    <p
+                        style="font-weight: 600; color: var(--primary); margin-top: 2rem; font-size: clamp(0.9rem, 2.5vw, 1rem);">
                         Wassalamu'alaikum Warahmatullahi Wabarakatuh
                     </p>
-                    
+
                     <div style="margin-top: 3rem;">
-                        <p style="font-weight: 600; margin-bottom: 1rem; font-size: clamp(0.85rem, 2.5vw, 0.95rem);">Keluarga Besar:</p>
-                        <p style="margin-bottom: 0.5rem; font-size: clamp(0.8rem, 2.5vw, 0.9rem);">SAHARUDDIN & SURIANI</p>
+                        <p style="font-weight: 600; margin-bottom: 1rem; font-size: clamp(0.85rem, 2.5vw, 0.95rem);">
+                            Keluarga Besar:</p>
+                        <p style="margin-bottom: 0.5rem; font-size: clamp(0.8rem, 2.5vw, 0.9rem);">SAHARUDDIN & SURIANI
+                        </p>
                         <p style="font-size: clamp(0.8rem, 2.5vw, 0.9rem);">BAHTIAR & NURSITIN</p>
                     </div>
                 </div>
@@ -1110,7 +1140,6 @@
         </div>
     </div>
 
-    <!-- Navigation Menu -->
     <nav class="nav-menu" id="navMenu">
         <div class="nav-items">
             <a href="#coupleSection" class="nav-item" onclick="navigateToSection('coupleSection')">
@@ -1140,7 +1169,6 @@
         </div>
     </nav>
 
-    <!-- Footer -->
     <footer class="footer" id="footerSection">
         <div class="footer-actions">
             <a href="https://maps.app.goo.gl/wpePZmcPo59v2xQW6?g_st=aw" target="_blank" class="footer-btn">
@@ -1153,199 +1181,203 @@
                 <i class="fas fa-share-alt"></i> Bagikan Undangan
             </button>
         </div>
-        
+
         <p style="font-size: clamp(0.8rem, 2vw, 0.9rem); opacity: 0.9; margin-top: 2rem;">
             © 2025 Undangan Pernikahan Suardi & Icha
         </p>
+        <p style="font-size: clamp(0.7rem, 1.8vw, 0.8rem); opacity: 0.8; margin-top: 1.5rem; letter-spacing: 0.5px;">
+            Design by <a href="https://www.instagram.com/muzanni.uce/" target="_blank"
+                style="color: var(--accent-light); text-decoration: none; font-weight: 500;">@muzanni.uce</a>
+        </p>
     </footer>
 
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
 
-<script>
-    // Global Variables
-    const musicFile = ''; // Set music URL here if you have one
-    let musicActive = false;
-    let countdownInterval;
+    <script>
+        // Global Variables
+        const musicFile = ''; // Set music URL here if you have one
+        let musicActive = false;
+        let countdownInterval;
 
-    // ----- [START] KODE INTEGRASI FIREBASE -----
+        // ----- [START] KODE INTEGRASI FIREBASE -----
 
-    // 1. Konfigurasi dan Inisialisasi Firebase Anda
-    // NOTE: Saya menggunakan Firebase SDK versi 8 (compat) agar lebih mudah dipasang di HTML biasa.
-    const firebaseConfig = {
-        apiKey: "AIzaSyBb7ILx0FzK8YJyfdPX0YBPqruDuaLjExI",
-        authDomain: "birtday-chintya.firebaseapp.com",
-        databaseURL: "https://birtday-chintya-default-rtdb.asia-southeast1.firebasedatabase.app",
-        projectId: "birtday-chintya",
-        storageBucket: "birtday-chintya.firebasestorage.app",
-        messagingSenderId: "866272620804",
-        appId: "1:866272620804:web:b0bcc88d38389b8d172051",
-        measurementId: "G-528NJBQDCP"
-    };
+        // 1. Konfigurasi dan Inisialisasi Firebase Anda
+        // NOTE: Saya menggunakan Firebase SDK versi 8 (compat) agar lebih mudah dipasang di HTML biasa.
+        const firebaseConfig = {
+            apiKey: "AIzaSyBb7ILx0FzK8YJyfdPX0YBPqruDuaLjExI",
+            authDomain: "birtday-chintya.firebaseapp.com",
+            databaseURL: "https://birtday-chintya-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "birtday-chintya",
+            storageBucket: "birtday-chintya.firebasestorage.app",
+            messagingSenderId: "866272620804",
+            appId: "1:866272620804:web:b0bcc88d38389b8d172051",
+            measurementId: "G-528NJBQDCP"
+        };
 
-    // Inisialisasi Firebase
-    firebase.initializeApp(firebaseConfig);
-    const analytics = firebase.analytics();
-    const database = firebase.database(); // Inisialisasi Realtime Database
-    const messagesRef = database.ref('messages'); // Membuat referensi ke 'messages' di database
+        // Inisialisasi Firebase
+        firebase.initializeApp(firebaseConfig);
+        const analytics = firebase.analytics();
+        const database = firebase.database(); // Inisialisasi Realtime Database
+        const messagesRef = database.ref('messages'); // Membuat referensi ke 'messages' di database
 
-    // ----- [END] KODE INTEGRASI FIREBASE -----
+        // ----- [END] KODE INTEGRASI FIREBASE -----
 
 
-    // Initialize Application
-    document.addEventListener('DOMContentLoaded', function() {
-        initializeGuestName();
-        startCountdownTimer();
-        loadFirebaseMessages(); // Mengganti loadSavedMessages() dengan fungsi baru
-        setupScrollHandlers();
-        setupAnimations();
-    });
+        // Initialize Application
+        document.addEventListener('DOMContentLoaded', function () {
+            initializeGuestName();
+            startCountdownTimer();
+            loadFirebaseMessages(); // Mengganti loadSavedMessages() dengan fungsi baru
+            setupScrollHandlers();
+            setupAnimations();
+        });
 
-    // Guest Name Functions (Tidak diubah)
-    function initializeGuestName() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const guestName = urlParams.get('to');
-        const guestElement = document.getElementById('guestInfo');
-        
-        if (guestName) {
-            guestElement.textContent = `Kepada Yth. ${decodeURIComponent(guestName)}`;
+        // Guest Name Functions (Tidak diubah)
+        function initializeGuestName() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const guestName = urlParams.get('to');
+            const guestElement = document.getElementById('guestInfo');
+
+            if (guestName) {
+                guestElement.textContent = `Kepada Yth. ${decodeURIComponent(guestName)}`;
+            }
         }
-    }
 
-    // Invitation Opening (Tidak diubah)
-    function startInvitation() {
-        const mainContent = document.getElementById('mainContent');
-        const navMenu = document.getElementById('navMenu');
-        
-        mainContent.classList.add('visible');
-        navMenu.classList.add('visible');
-        
-        const audio = document.getElementById('bgMusic');
-        if (musicFile) {
-            audio.src = musicFile;
-            audio.volume = 0.3;
-            audio.play().catch(e => console.log('Audio autoplay blocked:', e));
-            musicActive = true;
+        // Invitation Opening (Tidak diubah)
+        function startInvitation() {
+            const mainContent = document.getElementById('mainContent');
+            const navMenu = document.getElementById('navMenu');
+
+            mainContent.classList.add('visible');
+            navMenu.classList.add('visible');
+
+            const audio = document.getElementById('bgMusic');
+            if (musicFile) {
+                audio.src = musicFile;
+                audio.volume = 0.3;
+                audio.play().catch(e => console.log('Audio autoplay blocked:', e));
+                musicActive = true;
+                updateMusicButton();
+            }
+
+            setTimeout(() => {
+                document.getElementById('coupleSection').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }, 300);
+        }
+
+        // Navigation Functions (Tidak diubah)
+        function navigateToSection(sectionId) {
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            event.currentTarget.classList.add('active'); // Menggunakan event.currentTarget
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // Music Control Functions (Tidak diubah)
+        function toggleMusic() {
+            const audio = document.getElementById('bgMusic');
+            if (musicActive) {
+                audio.pause();
+                musicActive = false;
+            } else {
+                audio.play().catch(e => console.log('Audio play failed:', e));
+                musicActive = true;
+            }
             updateMusicButton();
         }
-        
-        setTimeout(() => {
-            document.getElementById('coupleSection').scrollIntoView({ 
-                behavior: 'smooth' 
-            });
-        }, 300);
-    }
+        document.getElementById('musicBtn').addEventListener('click', toggleMusic);
 
-    // Navigation Functions (Tidak diubah)
-    function navigateToSection(sectionId) {
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.classList.remove('active');
-        });
-        event.currentTarget.classList.add('active'); // Menggunakan event.currentTarget
-        document.getElementById(sectionId).scrollIntoView({ 
-            behavior: 'smooth',
-            block: 'start'
-        });
-    }
+        // Countdown Timer (Tidak diubah)
+        function startCountdownTimer() {
+            const weddingDate = new Date('2025-09-01T11:00:00+08:00'); // WITA timezone
 
-    // Music Control Functions (Tidak diubah)
-    function toggleMusic() {
-        const audio = document.getElementById('bgMusic');
-        if (musicActive) {
-            audio.pause();
-            musicActive = false;
-        } else {
-            audio.play().catch(e => console.log('Audio play failed:', e));
-            musicActive = true;
-        }
-        updateMusicButton();
-    }
-    document.getElementById('musicBtn').addEventListener('click', toggleMusic);
+            countdownInterval = setInterval(function () {
+                const now = new Date().getTime();
+                const timeLeft = weddingDate.getTime() - now;
 
-    // Countdown Timer (Tidak diubah)
-    function startCountdownTimer() {
-        const weddingDate = new Date('2025-09-01T11:00:00+08:00'); // WITA timezone
-        
-        countdownInterval = setInterval(function() {
-            const now = new Date().getTime();
-            const timeLeft = weddingDate.getTime() - now;
-            
-            if (timeLeft < 0) {
-                clearInterval(countdownInterval);
-                document.getElementById('countdownDisplay').innerHTML = 
-                    '<p style="text-align: center; font-size: 1.2rem; color: var(--primary); font-weight: 600;">Alhamdulillah, acara telah berlangsung!</p>';
-                return;
-            }
-            
-            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-            
-            document.getElementById('countDays').textContent = days;
-            document.getElementById('countHours').textContent = hours;
-            document.getElementById('countMinutes').textContent = minutes;
-            document.getElementById('countSeconds').textContent = seconds;
-        }, 1000);
-    }
-
-    // ----- [START] MODIFIKASI FUNGSI RSVP & UCAPAN -----
-
-    // 3. Modifikasi fungsi handleRSVP untuk menyimpan ke Firebase
-    function handleRSVP(event) {
-        event.preventDefault();
-        
-        const name = document.getElementById('rsvpName').value;
-        const message = document.getElementById('rsvpMessage').value;
-        const attendance = document.getElementById('rsvpAttendance').value;
-        const guests = document.getElementById('rsvpGuests').value;
-        
-        // Buat objek data untuk dikirim ke Firebase
-        const rsvpData = {
-            name: name,
-            message: message,
-            attendance: attendance,
-            guests: guests,
-            // Gunakan timestamp dari server Firebase untuk konsistensi
-            timestamp: firebase.database.ServerValue.TIMESTAMP 
-        };
-        
-        // Kirim (push) data ke Firebase Realtime Database
-        messagesRef.push(rsvpData)
-            .then(() => {
-                showToast('Terima kasih! Ucapan Anda telah tersimpan.');
-                event.target.reset(); // Reset form setelah berhasil
-            })
-            .catch((error) => {
-                console.error("Gagal menyimpan data: ", error);
-                showToast('Maaf, terjadi kesalahan saat mengirim ucapan.');
-            });
-    }
-
-    // 4. Buat fungsi baru untuk memuat ucapan dari Firebase
-    function loadFirebaseMessages() {
-        const messagesList = document.getElementById('messagesList');
-        
-        messagesRef.orderByChild('timestamp').limitToLast(50).on('value', (snapshot) => {
-            messagesList.innerHTML = ''; 
-            
-            if (snapshot.exists()) {
-                const messagesData = snapshot.val();
-                let messagesArray = [];
-                
-                for (let key in messagesData) {
-                    messagesArray.push({ id: key, ...messagesData[key] });
+                if (timeLeft < 0) {
+                    clearInterval(countdownInterval);
+                    document.getElementById('countdownDisplay').innerHTML =
+                        '<p style="text-align: center; font-size: 1.2rem; color: var(--primary); font-weight: 600;">Acara telah berakhir.</p>';
+                    return;
                 }
 
-                messagesArray.reverse();
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-                messagesList.innerHTML = messagesArray.map(msg => {
-                    const formattedDate = new Date(msg.timestamp).toLocaleString('id-ID', {
-                        day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'
-                    });
+                document.getElementById('countDays').textContent = days;
+                document.getElementById('countHours').textContent = hours;
+                document.getElementById('countMinutes').textContent = minutes;
+                document.getElementById('countSeconds').textContent = seconds;
+            }, 1000);
+        }
 
-                    return `
+        // ----- [START] MODIFIKASI FUNGSI RSVP & UCAPAN -----
+
+        // 3. Modifikasi fungsi handleRSVP untuk menyimpan ke Firebase
+        function handleRSVP(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('rsvpName').value;
+            const message = document.getElementById('rsvpMessage').value;
+            const attendance = document.getElementById('rsvpAttendance').value;
+            const guests = document.getElementById('rsvpGuests').value;
+
+            // Buat objek data untuk dikirim ke Firebase
+            const rsvpData = {
+                name: name,
+                message: message,
+                attendance: attendance,
+                guests: guests,
+                // Gunakan timestamp dari server Firebase untuk konsistensi
+                timestamp: firebase.database.ServerValue.TIMESTAMP
+            };
+
+            // Kirim (push) data ke Firebase Realtime Database
+            messagesRef.push(rsvpData)
+                .then(() => {
+                    showToast('Terima kasih! Ucapan Anda telah tersimpan.');
+                    event.target.reset(); // Reset form setelah berhasil
+                })
+                .catch((error) => {
+                    console.error("Gagal menyimpan data: ", error);
+                    showToast('Maaf, terjadi kesalahan saat mengirim ucapan.');
+                });
+        }
+
+        // 4. Buat fungsi baru untuk memuat ucapan dari Firebase
+        function loadFirebaseMessages() {
+            const messagesList = document.getElementById('messagesList');
+
+            messagesRef.orderByChild('timestamp').limitToLast(50).on('value', (snapshot) => {
+                messagesList.innerHTML = '';
+
+                if (snapshot.exists()) {
+                    const messagesData = snapshot.val();
+                    let messagesArray = [];
+
+                    for (let key in messagesData) {
+                        messagesArray.push({ id: key, ...messagesData[key] });
+                    }
+
+                    messagesArray.reverse();
+
+                    messagesList.innerHTML = messagesArray.map(msg => {
+                        const formattedDate = new Date(msg.timestamp).toLocaleString('id-ID', {
+                            day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'
+                        });
+
+                        return `
                         <div class="message-item">
                             <div class="message-name">${msg.name}</div>
                             <div class="message-text">${msg.message || 'Tidak ada pesan khusus'}</div>
@@ -1354,119 +1386,111 @@
                             </div>
                         </div>
                     `;
-                }).join('');
+                    }).join('');
+                } else {
+                    messagesList.innerHTML = '<p style="text-align: center; color: var(--gray); margin-top: 2rem; font-style: italic;">Jadilah yang pertama memberikan ucapan!</p>';
+                }
+            });
+        }
+
+        // ----- [END] MODIFIKASI FUNGSI RSVP & UCAPAN -----
+
+        // Bank Account Functions (Tidak diubah)
+        function copyBankAccount() {
+            const accountNumber = document.getElementById('bankAccount').textContent;
+            navigator.clipboard.writeText(accountNumber).then(() => {
+                showToast('Nomor rekening berhasil disalin!');
+            }).catch(() => {
+                const tempTextarea = document.createElement('textarea');
+                tempTextarea.value = accountNumber;
+                document.body.appendChild(tempTextarea);
+                tempTextarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempTextarea);
+                showToast('Nomor rekening berhasil disalin!');
+            });
+        }
+
+        function openBankApp() { showToast('Silakan buka aplikasi mobile banking Anda'); }
+
+        function shareInvitation() {
+            const currentUrl = window.location.href;
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Undangan Pernikahan Suardi & Icha',
+                    text: 'Anda diundang ke pernikahan kami',
+                    url: currentUrl
+                });
             } else {
-                messagesList.innerHTML = '<p style="text-align: center; color: var(--gray); margin-top: 2rem; font-style: italic;">Jadilah yang pertama memberikan ucapan!</p>';
+                navigator.clipboard.writeText(currentUrl).then(() => {
+                    showToast('Link undangan berhasil disalin!');
+                });
             }
-        });
-    }
-
-    // ----- [END] MODIFIKASI FUNGSI RSVP & UCAPAN -----
-
-    // Bank Account Functions (Tidak diubah)
-    function copyBankAccount() {
-        const accountNumber = document.getElementById('bankAccount').textContent;
-        navigator.clipboard.writeText(accountNumber).then(() => {
-            showToast('Nomor rekening berhasil disalin!');
-        }).catch(() => {
-            const tempTextarea = document.createElement('textarea');
-            tempTextarea.value = accountNumber;
-            document.body.appendChild(tempTextarea);
-            tempTextarea.select();
-            document.execCommand('copy');
-            document.body.removeChild(tempTextarea);
-            showToast('Nomor rekening berhasil disalin!');
-        });
-    }
-
-    // Sisa fungsi lainnya tetap sama... (Tidak perlu saya tulis ulang semua, cukup copy paste seluruh blok ini)
-    function openBankApp() { showToast('Silakan buka aplikasi mobile banking Anda'); }
-    function shareInvitation() { /* ... */ }
-    function showToast(message) { /* ... */ }
-    function setupScrollHandlers() { /* ... */ }
-    function updateMusicButton() { /* ... */ }
-    function updateActiveNavigation() { /* ... */ }
-    function setupAnimations() { /* ... */ }
-
-    // Re-binding beberapa fungsi yang hilang dari copy-paste sebelumnya
-    // (Kode di atas sudah lengkap, ini hanya untuk memastikan)
-    function shareInvitation() {
-        const currentUrl = window.location.href;
-        if (navigator.share) {
-            navigator.share({
-                title: 'Undangan Pernikahan Suardi & Icha',
-                text: 'Anda diundang ke pernikahan kami',
-                url: currentUrl
+        }
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('visible');
+            setTimeout(() => {
+                toast.classList.remove('visible');
+            }, 4000);
+        }
+        function setupScrollHandlers() {
+            const backToTopBtn = document.getElementById('backTop');
+            window.addEventListener('scroll', () => {
+                backToTopBtn.style.display = (window.pageYOffset > 500) ? 'flex' : 'none';
+                updateActiveNavigation();
             });
-        } else {
-            navigator.clipboard.writeText(currentUrl).then(() => {
-                showToast('Link undangan berhasil disalin!');
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         }
-    }
-    function showToast(message) {
-        const toast = document.getElementById('toast');
-        toast.textContent = message;
-        toast.classList.add('visible');
-        setTimeout(() => {
-            toast.classList.remove('visible');
-        }, 4000);
-    }
-    function setupScrollHandlers() {
-        const backToTopBtn = document.getElementById('backTop');
-        window.addEventListener('scroll', () => {
-            backToTopBtn.style.display = (window.pageYOffset > 500) ? 'flex' : 'none';
-            updateActiveNavigation();
-        });
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
-     function updateActiveNavigation() {
-        const sections = ['coupleSection', 'akadSection', 'receptionSection', 'countdownSection', 'rsvpSection', 'giftSection'];
-        const navItems = document.querySelectorAll('.nav-item');
-        let currentSection = '';
-        
-        sections.forEach(sectionId => {
-            const section = document.getElementById(sectionId);
-            if (section) {
-                const rect = section.getBoundingClientRect();
-                if (rect.top <= 150 && rect.bottom >= 150) {
-                    currentSection = sectionId;
-                }
-            }
-        });
-        
-        navItems.forEach((item, index) => {
-            item.classList.remove('active');
-            if (item.getAttribute('href') === `#${currentSection}`) {
-                item.classList.add('active');
-            }
-        });
-    }
-    function updateMusicButton() {
-        const button = document.getElementById('musicBtn');
-        const icon = button.querySelector('i');
-        if (musicActive) {
-            icon.className = 'fas fa-pause';
-            button.classList.add('active');
-        } else {
-            icon.className = 'fas fa-play';
-            button.classList.remove('active');
-        }
-    }
-     function setupAnimations() {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
+        function updateActiveNavigation() {
+            const sections = ['coupleSection', 'akadSection', 'receptionSection', 'countdownSection', 'rsvpSection', 'giftSection'];
+            const navItems = document.querySelectorAll('.nav-item');
+            let currentSection = '';
+
+            sections.forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= 150 && rect.bottom >= 150) {
+                        currentSection = sectionId;
+                    }
                 }
             });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-        document.querySelectorAll('.content-section').forEach(section => {
-            observer.observe(section);
-        });
-    }
-</script>
+
+            navItems.forEach((item) => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${currentSection}`) {
+                    item.classList.add('active');
+                }
+            });
+        }
+        function updateMusicButton() {
+            const button = document.getElementById('musicBtn');
+            const icon = button.querySelector('i');
+            if (musicActive) {
+                icon.className = 'fas fa-pause';
+                button.classList.add('active');
+            } else {
+                icon.className = 'fas fa-play';
+                button.classList.remove('active');
+            }
+        }
+        function setupAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+            document.querySelectorAll('.content-section').forEach(section => {
+                observer.observe(section);
+            });
+        }
+    </script>
 </body>
+
 </html>
