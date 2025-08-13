@@ -216,6 +216,15 @@
             position: relative;
             opacity: 0.9;
         }
+        
+        /* Gaya untuk nama tamu yang di-bold */
+.guest-info b {
+    font-weight: 600; /* Membuat tulisan lebih tebal */
+    font-size: clamp(1rem, 2.8vw, 1.2rem); /* Sedikit lebih besar dari teks di atasnya */
+    display: inline-block;
+    margin-top: 8px; /* Memberi sedikit jarak dari "Kepada Yth." */
+    letter-spacing: 0.5px;
+}
 
         .open-invitation {
             background: linear-gradient(45deg, var(--white), var(--accent-light));
@@ -760,40 +769,37 @@
         .main-content.visible {
             display: block;
         }
-
+        
         /* Adab Walimah Section */
-        .adab-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-            text-align: center;
-        }
-
-        .adab-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .adab-icon {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid var(--accent-light);
-            border-radius: 50%;
-        }
-
-        .adab-text {
-            font-size: 0.85rem;
-            color: var(--gray);
-            line-height: 1.5;
-        }
+.adab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+.adab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.adab-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--accent-light);
+    border-radius: 50%;
+}
+.adab-text {
+    font-size: 0.85rem;
+    color: var(--gray);
+    line-height: 1.5;
+}
 
         /* Footer */
         .footer {
@@ -1172,53 +1178,52 @@
                 </div>
             </section>
             <section class="content-section" id="adabSection">
-                <div class="section-header">
-                    <h2 class="section-title">Adab Walimah</h2>
-                    <p class="section-desc">Tanpa mengurangi rasa hormat kami, para tamu diharapkan memperhatikan
-                        hal-hal berikut:</p>
-                </div>
+    <div class="section-header">
+        <h2 class="section-title">Adab Walimah</h2>
+        <p class="section-desc">Tanpa mengurangi rasa hormat kami, para tamu diharapkan memperhatikan hal-hal berikut:</p>
+    </div>
 
-                <div class="card fade-in-up">
-                    <div class="adab-grid">
-                        <div class="adab-item">
-                            <div class="adab-icon"><i class="fas fa-users-slash"></i></div>
-                            <p class="adab-text">Tamu pria & wanita terpisah</p>
-                        </div>
-                        <div class="adab-item">
-                            <div class="adab-icon"><i class="fas fa-handshake-slash"></i></div>
-                            <p class="adab-text">Tidak berjabat dengan non-mahrom</p>
-                        </div>
-                        <div class="adab-item">
-                            <div class="adab-icon"><i class="fas fa-praying-hands"></i></div>
-                            <p class="adab-text">Mendo'akan keberkahan untuk pengantin</p>
-                        </div>
-                        <div class="adab-item">
-                            <div class="adab-icon"><i class="fas fa-utensils"></i></div>
-                            <p class="adab-text">Duduk, makan dengan tangan kanan, baca Bismillah</p>
-                        </div>
-                        <div class="adab-item">
-                            <div class="adab-icon"><i class="fas fa-trash-alt"></i></div>
-                            <p class="adab-text">Tidak Mubadzir</p>
-                        </div>
-                        <div class="adab-item">
-                            <div class="adab-icon"><i class="fas fa-smoking-ban"></i></div>
-                            <p class="adab-text">Tidak Merokok</p>
-                        </div>
-                        <div class="adab-item">
-                            <div class="adab-icon"><i class="fas fa-mosque"></i></div>
-                            <p class="adab-text">Menjaga waktu sholat</p>
-                        </div>
-                        <div class="adab-item">
-                            <div class="adab-icon"><i class="fas fa-user-check"></i></div>
-                            <p class="adab-text">Berpakaian dengan rapi & sopan</p>
-                        </div>
-                        <div class="adab-item">
-                            <div class="adab-icon"><i class="fas fa-camera"></i></div>
-                            <p class="adab-text">Tidak memfoto pengantin tanpa izin</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <div class="card fade-in-up">
+        <div class="adab-grid">
+            <div class="adab-item">
+                <div class="adab-icon"><i class="fas fa-users-slash"></i></div>
+                <p class="adab-text">Tamu pria & wanita terpisah</p>
+            </div>
+            <div class="adab-item">
+                <div class="adab-icon"><i class="fas fa-handshake-slash"></i></div>
+                <p class="adab-text">Tidak berjabat dengan non-mahrom</p>
+            </div>
+            <div class="adab-item">
+                <div class="adab-icon"><i class="fas fa-praying-hands"></i></div>
+                <p class="adab-text">Mendo'akan keberkahan untuk pengantin</p>
+            </div>
+            <div class="adab-item">
+                <div class="adab-icon"><i class="fas fa-utensils"></i></div>
+                <p class="adab-text">Duduk, makan dengan tangan kanan, baca Bismillah</p>
+            </div>
+            <div class="adab-item">
+                <div class="adab-icon"><i class="fas fa-trash-alt"></i></div>
+                <p class="adab-text">Tidak Mubadzir</p>
+            </div>
+            <div class="adab-item">
+                <div class="adab-icon"><i class="fas fa-smoking-ban"></i></div>
+                <p class="adab-text">Tidak Merokok</p>
+            </div>
+            <div class="adab-item">
+                <div class="adab-icon"><i class="fas fa-mosque"></i></div>
+                <p class="adab-text">Menjaga waktu sholat</p>
+            </div>
+            <div class="adab-item">
+                <div class="adab-icon"><i class="fas fa-user-check"></i></div>
+                <p class="adab-text">Berpakaian dengan rapi & sopan</p>
+            </div>
+            <div class="adab-item">
+                <div class="adab-icon"><i class="fas fa-camera"></i></div>
+                <p class="adab-text">Tidak memfoto pengantin tanpa izin</p>
+            </div>
+        </div>
+    </div>
+</section>
         </div>
     </div>
 
@@ -1250,7 +1255,7 @@
             </a>
         </div>
     </nav>
-
+    
 
     <footer class="footer" id="footerSection">
         <div class="footer-actions">
@@ -1277,7 +1282,7 @@
 
     <script>
         // Global Variables
-        const musicFile = 'weddingnasheed.mp3'; // Masukkan nama file musik Anda di sini
+const musicFile = 'weddingnasheed.mp3'; // Masukkan nama file musik Anda di sini
         let musicActive = false;
         let countdownInterval;
 
@@ -1321,7 +1326,7 @@
             const guestElement = document.getElementById('guestInfo');
 
             if (guestName) {
-                guestElement.textContent = `Kepada Yth. ${decodeURIComponent(guestName)}`;
+                guestElement.innerHTML = `Kepada Yth.<br><b>${decodeURIComponent(guestName)}</b>`;
             }
         }
 
