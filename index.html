@@ -116,8 +116,22 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="islamic" patternUnits="userSpaceOnUse" width="20" height="20"><circle cx="10" cy="10" r="1" fill="rgba(201,169,110,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23islamic)"/></svg>');
-            opacity: 0.3;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(201,169,110,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(201,169,110,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(201,169,110,0.05) 0%, transparent 50%);
+            opacity: 0.8;
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><defs><pattern id="hearts" patternUnits="userSpaceOnUse" width="40" height="40"><path d="M20 15 C15 10, 5 10, 5 20 C5 30, 20 35, 20 35 C20 35, 35 30, 35 20 C35 10, 25 10, 20 15 Z" fill="rgba(201,169,110,0.03)"/></pattern></defs><rect width="200" height="200" fill="url(%23hearts)"/></svg>');
+            opacity: 0.4;
         }
 
         .bismillah {
@@ -130,13 +144,21 @@
             position: relative;
         }
 
-        .islamic-ornament {
-            width: clamp(80px, 15vw, 120px);
-            height: clamp(80px, 15vw, 120px);
+        .love-icon {
+            font-size: clamp(3rem, 8vw, 5rem);
+            color: var(--accent);
             margin: 2rem 0;
             z-index: 2;
             position: relative;
-            opacity: 0.9;
+            animation: heartbeat 2s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            14% { transform: scale(1.1); }
+            28% { transform: scale(1); }
+            42% { transform: scale(1.1); }
+            70% { transform: scale(1); }
         }
 
         .couple-names {
@@ -148,6 +170,11 @@
             letter-spacing: 2px;
             z-index: 2;
             position: relative;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, var(--white), var(--accent-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .wedding-date {
@@ -169,25 +196,33 @@
         }
 
         .open-invitation {
-            background: var(--white);
+            background: linear-gradient(45deg, var(--white), var(--accent-light));
             color: var(--primary);
-            border: none;
-            padding: 1rem 2.5rem;
+            border: 2px solid var(--accent);
+            padding: 1.2rem 3rem;
             border-radius: 50px;
             font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-            font-weight: 500;
+            font-weight: 600;
             cursor: pointer;
-            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2), 0 0 20px rgba(201,169,110,0.3);
+            transition: all 0.4s ease;
             margin-top: 2rem;
             z-index: 2;
             position: relative;
             letter-spacing: 0.5px;
+            text-transform: uppercase;
+            animation: glow 3s ease-in-out infinite alternate;
         }
 
         .open-invitation:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 35px rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.4), 0 0 30px rgba(201,169,110,0.5);
+            background: var(--white);
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2), 0 0 20px rgba(201,169,110,0.3); }
+            to { box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3), 0 0 25px rgba(201,169,110,0.4); }
         }
 
         .guest-name-btn {
@@ -843,19 +878,9 @@
         <section class="hero-section" id="heroSection">
             <div class="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</div>
             
-            <svg class="islamic-ornament" viewBox="0 0 120 120">
-                <defs>
-                    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:var(--accent);stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:var(--accent-light);stop-opacity:1" />
-                    </linearGradient>
-                </defs>
-                <circle cx="60" cy="60" r="50" fill="none" stroke="url(#goldGrad)" stroke-width="1.5"/>
-                <circle cx="60" cy="60" r="35" fill="none" stroke="url(#goldGrad)" stroke-width="1"/>
-                <circle cx="60" cy="60" r="20" fill="none" stroke="url(#goldGrad)" stroke-width="0.5"/>
-                <path d="M60 20 L65 45 L90 45 L72.5 62.5 L77.5 87.5 L60 75 L42.5 87.5 L47.5 62.5 L30 45 L55 45 Z" 
-                      fill="none" stroke="url(#goldGrad)" stroke-width="1" opacity="0.8"/>
-            </svg>
+            <div class="love-icon">
+                <i class="fas fa-heart"></i>
+            </div>
 
             <h1 class="couple-names">Suardi & Icha</h1>
             <div class="wedding-date">1 September 2025</div>
@@ -863,7 +888,6 @@
             <div class="guest-info" id="guestInfo">
                 Kepada Yth. Tamu Undangan
             </div>
-            <button class="guest-name-btn" onclick="changeGuestName()">Ubah Nama</button>
             
             <button class="open-invitation" onclick="startInvitation()">
                 Buka Undangan
@@ -1014,10 +1038,6 @@
                                 <i class="fas fa-paper-plane"></i> Kirim Ucapan
                             </button>
                         </form>
-                        
-                        <button class="whatsapp-btn" onclick="shareViaWhatsApp()">
-                            <i class="fab fa-whatsapp"></i> Bagikan via WhatsApp
-                        </button>
                     </div>
 
                     <div class="messages-list" id="messagesList"></div>
@@ -1445,5 +1465,5 @@
             });
         }
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96e48fc31426ec19',t:'MTc1NTA0OTgyNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96e49bceb61d1564',t:'MTc1NTA1MDMxOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
