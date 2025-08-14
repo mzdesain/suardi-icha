@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input Nama Tamu</title>
+    <title>Generator Link Undangan</title>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -11,7 +11,7 @@
             color: #333;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Ubah ke flex-start agar tidak terpusat vertikal jika konten panjang */
             min-height: 100vh;
             margin: 0;
             padding: 20px;
@@ -23,10 +23,10 @@
             border-radius: 12px;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
             width: 100%;
-            max-width: 600px;
+            max-width: 700px; /* Lebarkan sedikit untuk daftar hasil */
         }
         h1 {
-            color: #2C5530; /* --primary color */
+            color: #2C5530;
             text-align: center;
             margin-bottom: 25px;
             font-family: 'Amiri', serif;
@@ -39,17 +39,9 @@
             margin-bottom: 8px;
             font-weight: 500;
         }
-        input[type="text"] {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-sizing: border-box;
-            font-size: 1rem;
-        }
         textarea {
             width: 100%;
-            height: 300px;
+            height: 150px; /* Sesuaikan tinggi awal */
             padding: 12px;
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -58,13 +50,8 @@
             line-height: 1.6;
             resize: vertical;
         }
-        .button-group {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        button {
-            flex-grow: 1;
+        button#generateButton {
+            width: 100%;
             padding: 12px 20px;
             border: none;
             border-radius: 8px;
@@ -72,19 +59,58 @@
             font-weight: 600;
             cursor: pointer;
             transition: background-color 0.3s ease;
-        }
-        #generateButton {
-            background-color: #2C5530; /* --primary color */
+            background-color: #2C5530;
             color: white;
+            margin-top: 10px;
         }
-        #generateButton:hover {
-            background-color: #1A3A1E; /* --primary-dark color */
+        button#generateButton:hover {
+            background-color: #1A3A1E;
         }
-        #copyButton {
-            background-color: #C9A96E; /* --accent color */
+
+        /* --- Gaya untuk daftar hasil --- */
+        #resultsList {
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            background-color: #fafafa;
+        }
+        .result-item-text {
+            flex-grow: 1;
+            margin-right: 15px;
+        }
+        .result-item-text p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .result-item-text p strong {
+            font-size: 1.1rem;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .copy-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            background-color: #C9A96E;
             color: white;
+            flex-shrink: 0; /* Mencegah tombol menyusut */
         }
-         #copyButton:hover {
+        .copy-btn:hover {
             background-color: #a9864f;
         }
     </style>
@@ -92,27 +118,20 @@
 <body>
 
     <div class="container">
-        <h1>Input Nama Tamu</h1>
+        <h1>Generator Link Undangan</h1>
         
         <div class="form-group">
-            <label for="guestNameInput">Nama Tamu Undangan:</label>
-            <input type="text" id="guestNameInput" placeholder="Contoh: Bapak Andi & Keluarga">
+            <label for="guestListInput">Nama Tamu Undangan (satu nama per baris):</label>
+            <textarea id="guestListInput" placeholder="Contoh:&#10;Bapak Andi & Keluarga&#10;Siti & Suami&#10;Rekan-rekan Kerja"></textarea>
         </div>
 
-        <div class="form-group">
-            <label for="outputMessage">Template Pesan (Hasil):</label>
-            <textarea id="outputMessage" readonly placeholder="Hasil pesan akan muncul di sini..."></textarea>
-        </div>
+        <button id="generateButton">Buat Pesan & Link</button>
 
-        <div class="button-group">
-            <button id="generateButton">Buat Pesan</button>
-            <button id="copyButton">Salin Teks</button>
-        </div>
+        <div id="resultsList"></div>
     </div>
 
     <script>
         // --- PENGATURAN TEMPLATE ---
-        // Anda bisa mengubah data di bawah ini jika ada perubahan
         const NAMA_PRIA = "Suardi, S.H.";
         const NAMA_WANITA = "Siti Nurhaliza";
         const LINK_UNDANGAN_DASAR = "https://suardi-icha.netlify.app/";
@@ -121,27 +140,37 @@
         const ALAMAT_AKAD = "Gang Losari 23 RT 07, Berbas Pantai";
 
         // Mengambil elemen dari HTML
-        const guestNameInput = document.getElementById('guestNameInput');
+        const guestListInput = document.getElementById('guestListInput');
         const generateButton = document.getElementById('generateButton');
-        const outputMessage = document.getElementById('outputMessage');
-        const copyButton = document.getElementById('copyButton');
+        const resultsList = document.getElementById('resultsList');
 
-        // Fungsi untuk membuat pesan
-        function generateMessage() {
-            const guestName = guestNameInput.value.trim();
-            if (!guestName) {
-                alert("Silakan masukkan nama tamu terlebih dahulu.");
+        // Fungsi utama untuk membuat daftar link
+        function generateAndDisplayLinks() {
+            const guestListText = guestListInput.value.trim();
+            if (!guestListText) {
+                alert("Silakan masukkan daftar nama tamu terlebih dahulu.");
                 return;
             }
 
-            // Meng-encode nama tamu agar aman untuk URL (mengubah spasi menjadi %20, dll)
-            const encodedGuestName = encodeURIComponent(guestName);
-            const fullLink = `${LINK_UNDANGAN_DASAR}?to=${encodedGuestName}`;
+            // Memecah teks di textarea menjadi array, setiap baris jadi satu item
+            // Lalu filter untuk menghapus baris kosong
+            const guestNames = guestListText.split('\n').filter(name => name.trim() !== '');
 
-            // Template pesan undangan (gunakan backtick ` untuk multiline)
-            const messageTemplate = `*Assalamu'alaikum Warahmatullah Wabarakatuh*
+            // Kosongkan hasil sebelumnya
+            resultsList.innerHTML = ''; 
 
-Yth. *${guestName}*
+            guestNames.forEach(guestName => {
+                // Trim nama untuk menghapus spasi ekstra
+                const currentGuestName = guestName.trim();
+                
+                // Meng-encode nama tamu agar aman untuk URL
+                const encodedGuestName = encodeURIComponent(currentGuestName);
+                const fullLink = `${LINK_UNDANGAN_DASAR}?to=${encodedGuestName}`;
+
+                // Template pesan undangan untuk tamu ini
+                const messageTemplate = `*Assalamu'alaikum Warahmatullah Wabarakatuh*
+
+Yth. *${currentGuestName}*
 _(Mohon maaf bila penulisan nama dan gelar keliru)_
 
 Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i, teman sekaligus sahabat, untuk menghadiri acara pernikahan kami:
@@ -155,7 +184,7 @@ ${fullLink}
 Pada
 🗓️ *${HARI_TANGGAL_AKAD}*
 🕐 *${PUKUL_AKAD}*
-📍  *${ALAMAT_AKAD}*
+📍 *${ALAMAT_AKAD}*
 
 Mohon maaf perihal undangan hanya dibagikan melalui pesan ini.
 
@@ -163,31 +192,42 @@ _Syukron Jazakumullahu Khairan atas perhatiannya._
 
 *Wassalamu'alaikum warahmatullahi wabarakatuh.*`;
 
-            outputMessage.value = messageTemplate;
-        }
+                // Membuat elemen HTML untuk setiap item hasil
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'result-item';
 
-        // Fungsi untuk menyalin teks
-        function copyMessage() {
-            if (!outputMessage.value) {
-                alert("Belum ada pesan yang dibuat untuk disalin.");
-                return;
-            }
+                const textDiv = document.createElement('div');
+                textDiv.className = 'result-item-text';
+                textDiv.innerHTML = `<p><strong>${currentGuestName}</strong></p><p>${fullLink}</p>`;
 
-            outputMessage.select();
-            navigator.clipboard.writeText(outputMessage.value).then(() => {
-                copyButton.textContent = "Berhasil Tersalin!";
-                setTimeout(() => {
-                    copyButton.textContent = "Salin Teks";
-                }, 2000); // Kembalikan teks tombol setelah 2 detik
-            }).catch(err => {
-                alert("Gagal menyalin teks.");
-                console.error('Error copying text: ', err);
+                const copyBtn = document.createElement('button');
+                copyBtn.className = 'copy-btn';
+                copyBtn.textContent = 'Salin Pesan';
+                
+                // Menambahkan event listener ke setiap tombol salin
+                copyBtn.addEventListener('click', () => {
+                    navigator.clipboard.writeText(messageTemplate).then(() => {
+                        copyBtn.textContent = 'Tersalin!';
+                        copyBtn.style.backgroundColor = '#2C5530'; // Warna hijau sbg feedback
+                        setTimeout(() => {
+                            copyBtn.textContent = 'Salin Pesan';
+                            copyBtn.style.backgroundColor = '#C9A96E'; // Kembali ke warna semula
+                        }, 2000); // Kembalikan teks tombol setelah 2 detik
+                    }).catch(err => {
+                        alert("Gagal menyalin teks.");
+                        console.error('Error copying text: ', err);
+                    });
+                });
+
+                // Menggabungkan elemen dan menambahkannya ke daftar hasil
+                itemDiv.appendChild(textDiv);
+                itemDiv.appendChild(copyBtn);
+                resultsList.appendChild(itemDiv);
             });
         }
 
-        // Menambahkan event listener ke tombol
-        generateButton.addEventListener('click', generateMessage);
-        copyButton.addEventListener('click', copyMessage);
+        // Menambahkan event listener ke tombol utama
+        generateButton.addEventListener('click', generateAndDisplayLinks);
     </script>
 
 </body>
