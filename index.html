@@ -216,15 +216,18 @@
             position: relative;
             opacity: 0.9;
         }
-        
+
         /* Gaya untuk nama tamu yang di-bold */
-.guest-info b {
-    font-weight: 600; /* Membuat tulisan lebih tebal */
-    font-size: clamp(1rem, 2.8vw, 1.2rem); /* Sedikit lebih besar dari teks di atasnya */
-    display: inline-block;
-    margin-top: 8px; /* Memberi sedikit jarak dari "Kepada Yth." */
-    letter-spacing: 0.5px;
-}
+        .guest-info b {
+            font-weight: 600;
+            /* Membuat tulisan lebih tebal */
+            font-size: clamp(1rem, 2.8vw, 1.2rem);
+            /* Sedikit lebih besar dari teks di atasnya */
+            display: inline-block;
+            margin-top: 8px;
+            /* Memberi sedikit jarak dari "Kepada Yth." */
+            letter-spacing: 0.5px;
+        }
 
         .open-invitation {
             background: linear-gradient(45deg, var(--white), var(--accent-light));
@@ -769,7 +772,7 @@
         .main-content.visible {
             display: block;
         }
-        
+
         /* Style untuk Doa Pernikahan */
 
         .wedding-doa {
@@ -801,37 +804,40 @@
             line-height: 1.7;
 
         }
-        
+
         /* Adab Walimah Section */
-.adab-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-    text-align: center;
-}
-.adab-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.adab-icon {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 1rem;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid var(--accent-light);
-    border-radius: 50%;
-}
-.adab-text {
-    font-size: 0.85rem;
-    color: var(--gray);
-    line-height: 1.5;
-}
+        .adab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .adab-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .adab-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--accent-light);
+            border-radius: 50%;
+        }
+
+        .adab-text {
+            font-size: 0.85rem;
+            color: var(--gray);
+            line-height: 1.5;
+        }
 
         /* Footer */
         .footer {
@@ -1209,74 +1215,77 @@
                     </div>
                 </div>
             </section>
-            
+
             <section class="content-section" id="doaSection">
 
-            <div class="card fade-in-up" style="text-align: center; background: linear-gradient(135deg, var(--white), var(--accent-light));">
+                <div class="card fade-in-up"
+                    style="text-align: center; background: linear-gradient(135deg, var(--white), var(--accent-light));">
 
-                <div class="wedding-doa">
+                    <div class="wedding-doa">
 
-                    بَارَكَ اللَّهُ لَكَ، وَبَارَكَ عَلَيْكَ، وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
+                        بَارَكَ اللَّهُ لَكَ، وَبَارَكَ عَلَيْكَ، وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
+
+                    </div>
+
+                    <p class="doa-translation">
+
+                        "Semoga Allah memberkahimu dan memberkahi atasmu, serta mengumpulkan kalian berdua dalam
+                        kebaikan."
+
+                    </p>
 
                 </div>
 
-                <p class="doa-translation">
+            </section>
 
-                    "Semoga Allah memberkahimu dan memberkahi atasmu, serta mengumpulkan kalian berdua dalam kebaikan."
-
-                </p>
-
-            </div>
-
-        </section>
-            
             <section class="content-section" id="adabSection">
-    <div class="section-header">
-        <h2 class="section-title">Adab Walimah</h2>
-        <p class="section-desc">Tanpa mengurangi rasa hormat kami, para tamu diharapkan memperhatikan hal-hal berikut:</p>
-    </div>
+                <div class="section-header">
+                    <h2 class="section-title">Adab Walimah</h2>
+                    <p class="section-desc">Tanpa mengurangi rasa hormat kami, para tamu diharapkan memperhatikan
+                        hal-hal berikut:</p>
+                </div>
 
-    <div class="card fade-in-up">
-        <div class="adab-grid">
-            <div class="adab-item">
-                <div class="adab-icon"><i class="fas fa-users-slash"></i></div>
-                <p class="adab-text">Tamu pria & wanita terpisah</p>
-            </div>
-            <div class="adab-item">
-                <div class="adab-icon"><i class="fas fa-handshake-slash"></i></div>
-                <p class="adab-text">Tidak berjabat dengan non-mahrom</p>
-            </div>
-            <div class="adab-item">
-                <div class="adab-icon"><i class="fas fa-praying-hands"></i></div>
-                <p class="adab-text">Mendo'akan keberkahan untuk pengantin</p>
-            </div>
-            <div class="adab-item">
-                <div class="adab-icon"><i class="fas fa-utensils"></i></div>
-                <p class="adab-text">Duduk, makan dengan tangan kanan, baca Bismillah</p>
-            </div>
-            <div class="adab-item">
-                <div class="adab-icon"><i class="fas fa-trash-alt"></i></div>
-                <p class="adab-text">Tidak Mubadzir</p>
-            </div>
-            <div class="adab-item">
-                <div class="adab-icon"><i class="fas fa-smoking-ban"></i></div>
-                <p class="adab-text">Tidak Merokok</p>
-            </div>
-            <div class="adab-item">
-                <div class="adab-icon"><i class="fas fa-mosque"></i></div>
-                <p class="adab-text">Menjaga waktu sholat</p>
-            </div>
-            <div class="adab-item">
-                <div class="adab-icon"><i class="fas fa-user-check"></i></div>
-                <p class="adab-text">Berpakaian dengan rapi & sopan</p>
-            </div>
-            <div class="adab-item">
-                <div class="adab-icon"><i class="fas fa-camera"></i></div>
-                <p class="adab-text">Tidak memfoto pengantin tanpa izin</p>
-            </div>
-        </div>
-    </div>
-</section>
+                <div class="card fade-in-up">
+                    <div class="adab-grid">
+                        <div class="adab-item">
+                            <div class="adab-icon"><i class="fas fa-users-slash"></i></div>
+                            <p class="adab-text">Tamu pria & wanita terpisah</p>
+                        </div>
+                        <div class="adab-item">
+                            <div class="adab-icon"><i class="fas fa-handshake-slash"></i></div>
+                            <p class="adab-text">Tidak berjabat dengan non-mahrom</p>
+                        </div>
+                        <div class="adab-item">
+                            <div class="adab-icon"><i class="fas fa-praying-hands"></i></div>
+                            <p class="adab-text">Mendo'akan keberkahan untuk pengantin</p>
+                        </div>
+                        <div class="adab-item">
+                            <div class="adab-icon"><i class="fas fa-utensils"></i></div>
+                            <p class="adab-text">Duduk, makan dengan tangan kanan, baca Bismillah</p>
+                        </div>
+                        <div class="adab-item">
+                            <div class="adab-icon"><i class="fas fa-trash-alt"></i></div>
+                            <p class="adab-text">Tidak Mubadzir</p>
+                        </div>
+                        <div class="adab-item">
+                            <div class="adab-icon"><i class="fas fa-smoking-ban"></i></div>
+                            <p class="adab-text">Tidak Merokok</p>
+                        </div>
+                        <div class="adab-item">
+                            <div class="adab-icon"><i class="fas fa-mosque"></i></div>
+                            <p class="adab-text">Menjaga waktu sholat</p>
+                        </div>
+                        <div class="adab-item">
+                            <div class="adab-icon"><i class="fas fa-user-check"></i></div>
+                            <p class="adab-text">Berpakaian dengan rapi & sopan</p>
+                        </div>
+                        <div class="adab-item">
+                            <div class="adab-icon"><i class="fas fa-camera"></i></div>
+                            <p class="adab-text">Tidak memfoto pengantin tanpa izin</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 
@@ -1308,7 +1317,7 @@
             </a>
         </div>
     </nav>
-    
+
 
     <footer class="footer" id="footerSection">
         <div class="footer-actions">
@@ -1335,44 +1344,39 @@
 
     <script>
         // Global Variables
-const musicFile = 'weddingnasheed.mp3'; // Masukkan nama file musik Anda di sini
+        const musicFile = 'weddingnasheed.mp3';
         let musicActive = false;
         let countdownInterval;
 
         // ----- [START] KODE INTEGRASI FIREBASE -----
-
-        // 1. Konfigurasi dan Inisialisasi Firebase Anda
-        // NOTE: Saya menggunakan Firebase SDK versi 8 (compat) agar lebih mudah dipasang di HTML biasa.
         const firebaseConfig = {
-            apiKey: "AIzaSyBb7ILx0FzK8YJyfdPX0YBPqruDuaLjExI",
-            authDomain: "birtday-chintya.firebaseapp.com",
-            databaseURL: "https://birtday-chintya-default-rtdb.asia-southeast1.firebasedatabase.app",
-            projectId: "birtday-chintya",
-            storageBucket: "birtday-chintya.firebasestorage.app",
-            messagingSenderId: "866272620804",
-            appId: "1:866272620804:web:b0bcc88d38389b8d172051",
-            measurementId: "G-528NJBQDCP"
+            apiKey: "AIzaSyA5beDbNG-7b9RyYYtvN0kiCxP5cDOmR2A",
+            authDomain: "undangandigital-8c797.firebaseapp.com",
+            databaseURL: "https://undangandigital-8c797-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "undangandigital-8c797",
+            storageBucket: "undangandigital-8c797.firebasestorage.app",
+            messagingSenderId: "125520026775",
+            appId: "1:125520026775:web:9c806118ad9ceeb61f5dd2",
+            measurementId: "G-5CZEK7HTNH"
         };
 
-        // Inisialisasi Firebase
         firebase.initializeApp(firebaseConfig);
         const analytics = firebase.analytics();
-        const database = firebase.database(); // Inisialisasi Realtime Database
-        const messagesRef = database.ref('messages'); // Membuat referensi ke 'messages' di database
-
+        const database = firebase.database(); 
+        const messagesRef = database.ref('messages');
         // ----- [END] KODE INTEGRASI FIREBASE -----
 
 
-        // Initialize Application
+
         document.addEventListener('DOMContentLoaded', function () {
             initializeGuestName();
             startCountdownTimer();
-            loadFirebaseMessages(); // Mengganti loadSavedMessages() dengan fungsi baru
+            loadFirebaseMessages();
             setupScrollHandlers();
             setupAnimations();
         });
 
-        // Guest Name Functions (Tidak diubah)
+ 
         function initializeGuestName() {
             const urlParams = new URLSearchParams(window.location.search);
             const guestName = urlParams.get('to');
@@ -1383,7 +1387,7 @@ const musicFile = 'weddingnasheed.mp3'; // Masukkan nama file musik Anda di sini
             }
         }
 
-        // Invitation Opening (Tidak diubah)
+
         function startInvitation() {
             const mainContent = document.getElementById('mainContent');
             const navMenu = document.getElementById('navMenu');
@@ -1407,7 +1411,7 @@ const musicFile = 'weddingnasheed.mp3'; // Masukkan nama file musik Anda di sini
             }, 300);
         }
 
-        // Navigation Functions (Tidak diubah)
+
         function navigateToSection(sectionId) {
             document.querySelectorAll('.nav-item').forEach(item => {
                 item.classList.remove('active');
@@ -1419,7 +1423,7 @@ const musicFile = 'weddingnasheed.mp3'; // Masukkan nama file musik Anda di sini
             });
         }
 
-        // Music Control Functions (Tidak diubah)
+
         function toggleMusic() {
             const audio = document.getElementById('bgMusic');
             if (musicActive) {
@@ -1433,7 +1437,7 @@ const musicFile = 'weddingnasheed.mp3'; // Masukkan nama file musik Anda di sini
         }
         document.getElementById('musicBtn').addEventListener('click', toggleMusic);
 
-        // Countdown Timer (Tidak diubah)
+
         function startCountdownTimer() {
             const weddingDate = new Date('2025-09-01T11:00:00+08:00'); // WITA timezone
 
@@ -1462,7 +1466,6 @@ const musicFile = 'weddingnasheed.mp3'; // Masukkan nama file musik Anda di sini
 
         // ----- [START] MODIFIKASI FUNGSI RSVP & UCAPAN -----
 
-        // 3. Modifikasi fungsi handleRSVP untuk menyimpan ke Firebase
         function handleRSVP(event) {
             event.preventDefault();
 
@@ -1471,17 +1474,14 @@ const musicFile = 'weddingnasheed.mp3'; // Masukkan nama file musik Anda di sini
             const attendance = document.getElementById('rsvpAttendance').value;
             const guests = document.getElementById('rsvpGuests').value;
 
-            // Buat objek data untuk dikirim ke Firebase
             const rsvpData = {
                 name: name,
                 message: message,
                 attendance: attendance,
                 guests: guests,
-                // Gunakan timestamp dari server Firebase untuk konsistensi
                 timestamp: firebase.database.ServerValue.TIMESTAMP
             };
 
-            // Kirim (push) data ke Firebase Realtime Database
             messagesRef.push(rsvpData)
                 .then(() => {
                     showToast('Terima kasih! Ucapan Anda telah tersimpan.');
@@ -1493,7 +1493,6 @@ const musicFile = 'weddingnasheed.mp3'; // Masukkan nama file musik Anda di sini
                 });
         }
 
-        // 4. Buat fungsi baru untuk memuat ucapan dari Firebase
         function loadFirebaseMessages() {
             const messagesList = document.getElementById('messagesList');
 
@@ -1533,7 +1532,7 @@ const musicFile = 'weddingnasheed.mp3'; // Masukkan nama file musik Anda di sini
 
         // ----- [END] MODIFIKASI FUNGSI RSVP & UCAPAN -----
 
-        // Bank Account Functions (Tidak diubah)
+
         function copyBankAccount() {
             const accountNumber = document.getElementById('bankAccount').textContent;
             navigator.clipboard.writeText(accountNumber).then(() => {
